@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json({ message: "Can't get the cars" });
+      res.status(500).json({ message: "Can't get the car list." });
     });
 });
 
@@ -21,7 +21,7 @@ router.get("/:id", (req, res) => {
       if (account) {
         res.status(200).json(account);
       } else {
-        res.status(404).json({ message: "Can't get the car" });
+        res.status(404).json({ message: "Can't get the car." });
       }
     });
 });
@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json({ message: "Can't create the car" });
+      res.status(500).json({ message: "Can't create the car." });
     });
 });
 
@@ -46,7 +46,7 @@ router.put("/:id", (req, res) => {
       if (account) {
         res.status(200).json(account);
       } else {
-        res.status(404).json({ message: "Can't update the car" });
+        res.status(404).json({ message: "Can't update the car." });
       }
     });
 });
@@ -59,7 +59,7 @@ router.delete("/:id", (req, res) => {
       if (account) {
         res.status(200).json(account);
       } else {
-        res.status(404).json({ message: "Can't update the car" });
+        res.status(404).json({ message: "Can't delete the car." });
       }
     });
 });
